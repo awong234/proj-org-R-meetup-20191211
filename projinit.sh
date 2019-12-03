@@ -22,3 +22,6 @@ then
 	mkdir report/
 fi
 
+# Rescuscitate renv
+
+Rscript -e "renv::restore()"
