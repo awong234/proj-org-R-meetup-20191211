@@ -22,6 +22,14 @@ then
 	mkdir report/
 fi
 
+if [ ! -d img/ ]
+then
+	mkdir img/
+fi
+
 # Rescuscitate renv
 
-Rscript -e "renv::restore()"
+if [ ! -d renv ]
+then
+	Rscript -e "renv::restore()"
+fi
