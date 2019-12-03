@@ -1,0 +1,27 @@
+{
+  "R": {
+    "Version": "3.5.1",
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://mran.microsoft.com/snapshot/2019-12-02"
+      }
+    ]
+  },
+  "Packages": {
+    "curl": {
+      "Package": "curl",
+      "Version": "3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "2a9d20d79d8180ff60ba38cca6c141b8"
+    },
+    "renv": {
+      "Package": "renv",
+      "Version": "0.8.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "54c5c0f4d9e93fa20d31fec2fa8bfe1c"
+    }
+  }
+}
