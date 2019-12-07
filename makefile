@@ -19,5 +19,9 @@ input/a1.xlsx: scripts/import_voting_pop_data.R R/*
 
 transformations: output/transformations.conf
 
-output/transformations.conf: scripts/transform.R R/* input/a5a.xlsx input/a1.xlsx
+output/transformations.conf: \
+scripts/transform.R \
+R/* \
+input/a5a.xlsx \
+input/a1.xlsx
 	Rscript scripts/transform.R
