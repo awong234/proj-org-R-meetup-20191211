@@ -3,7 +3,7 @@
 all: data transformations
 
 clean:
-	rm input/*
+	rm input/*; rm output/*
 
 # Data -------------------------------------------------------------------------
 
