@@ -9,13 +9,14 @@
   library(vroom)
   library(tidyr)
   library(janitor)
+  library(dplyr)
 }
 
 source("R/transform_functions.R")
 
 # Import data ------------------------------------------------------------------
 
-a5a = readxl::read_excel('data/a5a.xlsx', range = "A4:O58")
+a5a = readxl::read_excel('input/a5a.xlsx', range = "A4:O58")
 
 # Data needs cleaning ----------------------------------------------------------
 
@@ -40,5 +41,26 @@ a5a_longer = clean_names(a5a_longer)
 # Write to disk ----------------------------------------------------------------
 
 vroom_write(a5a_longer, path = 'output/a5a.tsv')
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #  
+
+# Import next dataset ----------------------------------------------------------
+
+a1 = readxl::read_excel('input/a1.xlsx', range = "A40:D53", col_names = FALSE)
+
+# Fix column names
+
+colnames(a1) = c("year", "total_registered_voters", "percent_total", "percent_citizen")
+
+a1 = a1 %>% 
+  mutate(n_citizen_reg = total_registered_voters * percent_citizen)
+
+# Write to disk ----------------------------------------------------------------
+
+vroom_write(a1, path = 'output/registered_population.tsv')
+
+# Confirm pass -----------------------------------------------------------------
+
+system('touch output/transformations.conf')
 
 # END --------------------------------------------------------------------------
