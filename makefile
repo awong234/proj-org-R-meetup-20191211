@@ -3,14 +3,13 @@
 all: data
 
 clean:
-	rm data/*
+	rm input/*
 
 # Data -------------------------------------------------------------------------
 
-data: data/a5a.xlsx
+data: input/a5a.xlsx
 
-data/a5a.xlsx: R/import_data.R
-	Rscript R/import_data.R
-
+input/a5a.xlsx: scripts/import_data.R R/*
+	Rscript scripts/import_data.R
 
 

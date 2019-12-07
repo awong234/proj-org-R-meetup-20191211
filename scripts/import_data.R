@@ -25,12 +25,12 @@ assert_that(
 
 # Fetch the data
 
-curl_download(url = url, destfile = 'data/a5a.xlsx')
+curl_download(url = url, destfile = 'input/a5a.xlsx')
 
 # Check that the data were downloaded correctly
 
 assert_that(
-  file.exists('data/a5a.xlsx')
+  file.exists('input/a5a.xlsx')
 )
 
 # END --------------------------------------------------------------------------
