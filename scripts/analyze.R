@@ -17,7 +17,7 @@ options(device = 'x11')
 
 # Import data ------------------------------------------------------------------
 
-voting = vroom(file = 'output/a5a.tsv')
+voting = vroom(file = 'output/voting_rates.tsv')
 
 voting = voting %>% filter(type == 'Citizen')
 
