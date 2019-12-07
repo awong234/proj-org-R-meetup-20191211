@@ -18,24 +18,24 @@
     },
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-50",
+      "Version": "7.3-51.4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "82076be4817671aac9f3808d4f608959"
+      "Hash": "a670f645948409d325eddb0b199ed968"
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.2-14",
+      "Version": "1.2-18",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "b411f6d86aaa6ed87bd13ef69b32b7a6"
+      "Hash": "b891a4c039bc7e3aa4e124ecc909d2a1"
     },
     "R6": {
       "Package": "R6",
-      "Version": "2.2.2",
+      "Version": "2.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "a0a5a402d39277bb83dae76409bb7620"
+      "Hash": "de2df3e60ec21c125210a69dbdfa69f8"
     },
     "RColorBrewer": {
       "Package": "RColorBrewer",
@@ -95,10 +95,10 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "3.2",
+      "Version": "4.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "2a9d20d79d8180ff60ba38cca6c141b8"
+      "Hash": "743ba61dd00b65d6ac661d04bb609d3b"
     },
     "digest": {
       "Package": "digest",
@@ -186,10 +186,10 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.5",
+      "Version": "1.6",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "31f2452b963c8f1b450191da859b4be8"
+      "Hash": "9ec2b2fe0e874a66d0cb54d8ced5618e"
     },
     "knitr": {
       "Package": "knitr",
@@ -207,10 +207,10 @@
     },
     "lattice": {
       "Package": "lattice",
-      "Version": "0.20-35",
+      "Version": "0.20-38",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "96238e972e6d8c631c273d91b13a90c3"
+      "Hash": "16dfe2407fe485b6a9fb098120008721"
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -242,10 +242,10 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.8-24",
+      "Version": "1.8-31",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "04a660f17e16de5d2081a9e06212fc14"
+      "Hash": "8927cb7b787c8dcaac81a35a80be3016"
     },
     "mime": {
       "Package": "mime",
@@ -263,10 +263,10 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-137",
+      "Version": "3.1-142",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "55f627741007cdb86b124a16183e6a9e"
+      "Hash": "7370dd336a854d9e105970deb89eee2f"
     },
     "pillar": {
       "Package": "pillar",
@@ -372,6 +372,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "b28f74376db8b145e247e29e20bb7deb"
+    },
+    "tidyr": {
+      "Package": "tidyr",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "67e029f5199136c9f5e7ab583a79a8fe"
     },
     "tidyselect": {
       "Package": "tidyselect",
