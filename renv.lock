@@ -205,6 +205,13 @@
       "Repository": "CRAN",
       "Hash": "120444406cc884baa3a2ff5c0566045b"
     },
+    "here": {
+      "Package": "here",
+      "Version": "0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "07f70da7018237a1c3ba8f455bdec18d"
+    },
     "highr": {
       "Package": "highr",
       "Version": "0.8",
@@ -435,6 +442,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "7adb4d47aecd144a1d259b44e873e5f3"
+    },
+    "rprojroot": {
+      "Package": "rprojroot",
+      "Version": "1.3-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "75611db569353a873f987f858b6f06dd"
     },
     "scales": {
       "Package": "scales",
