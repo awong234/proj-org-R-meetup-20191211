@@ -1,6 +1,8 @@
 ---
 output: html_document
 title: Voting patterns over time
+editor_options: 
+  chunk_output_type: console
 ---
 
 #### A short work-up of U.S. Census data on voting proportions of voting-eligible citizenry
@@ -51,14 +53,18 @@ The fit for the interaction model:
 ```{r}
 pick = which(models$description == "voting_rate ~ -1 + year * state")
 mod  = models$model_fit[[pick]]
-summary(mod)
 ```
 
 ```{r}
-tidy_interaction = models$model_fit[[pick]] %>% tidy %>% mutate(type = case_when(
+
+slope_or_int = function(df) {
+  df %>%  mutate(type = case_when(
   grepl(pattern = '(^year)', x = term) ~ 'slope',
   T ~ 'intercept'
 ))
+}
+
+tidy_interaction = models$model_fit[[pick]] %>% tidy %>% slope_or_int
 
 slopes = filter(tidy_interaction, type == 'slope')
 slopes = slopes %>% mutate(direction = case_when(
@@ -108,7 +114,6 @@ augs = bind_rows(list("r_intercept + r_slope" = augment(re_mod_1), "r_intercept"
 overall = ggplot(augs) + 
   geom_point(aes(x = year, y = voting_rate)) + 
   geom_line(aes(x = year, y = .fitted, color = model)) + 
-  
   facet_wrap(~state) 
 
 one_state = ggplot(augs %>% filter(state == "Ohio")) +
@@ -153,4 +158,42 @@ ggplot(aug) +
   scale_x_continuous(breaks = seq(1992, 2016,by=4), labels = yr)+  
   facet_wrap(~state) + 
   ggtitle('voting_rate ~ (1 | state) + (1 | year) + year\nRandom intercepts for year and state, with year fixed effect')
+```
+
+## Fitting the residuals of the random effect
+
+Interestingly -- when the residuals of the random effects model are fit, the
+slopes are identical to that of the ordinary interaction model. The standard
+error of the slope estimates are smaller in the random effects residual model.
+
+Why is this?
+
+```{r}
+
+# Plot residuals resulting from the random intercepts model (slope + year)
+
+aug %>% 
+  ggplot() +
+  geom_point(aes(x = year, y = .resid)) +
+  geom_line(aes(x = year, y = .resid)) + 
+  facet_wrap(~state)
+
+aug_rn = aug %>% rename(.resid..1 = .resid) %>% as_tibble
+
+mod2 = lm(data = aug_rn, formula = .resid..1 ~ year * state)
+
+aug2 = augment(mod2)
+
+aug2 %>% ggplot() + 
+  geom_point(aes(x = year, y = .resid..1)) +
+  geom_line(aes(x = year, y = .fitted)) + 
+  facet_wrap(~state)
+```
+
+```{r}
+tidy_mod2 = tidy(mod2) %>% slope_or_int %>% filter(type == 'slope')
+tidy_mod  = tidy(mod) %>% slope_or_int %>% filter(type == 'slope')
+
+tidy_mod %>% left_join(tidy_mod2, by = 'term', suffix = c("_lm", "_lmer")) %>% 
+  select(term, starts_with('estimate'), starts_with('std')) %>% print(n=65)
 ```
