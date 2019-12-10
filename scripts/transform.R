@@ -44,8 +44,4 @@ a5a_longer = clean_names(a5a_longer)
 
 vroom_write(a5a_longer, path = 'output/voting_rates.tsv')
 
-# Confirm pass -----------------------------------------------------------------
-
-system('touch output/transformations.conf')
-
 # END --------------------------------------------------------------------------
