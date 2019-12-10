@@ -3,7 +3,7 @@
 all: data transformations analyses reports
 
 clean:
-	rm input/*; rm output/*; rm report/report.html
+	rm input/*; rm output/*; rm report/report.html; rm img/*
 
 # Data -------------------------------------------------------------------------
 
