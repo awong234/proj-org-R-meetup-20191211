@@ -57,6 +57,7 @@ model_collection = tibble(
     voting_rate ~ -1 + year * state,
     voting_rate ~ -1 + state + year,
     voting_rate ~ year + (year | state),
+    voting_rate ~ year + (1 | state),
     voting_rate ~ (1 | state) + (1| year) + year
   ), 
   'description' = as.character(formulas),
@@ -65,12 +66,13 @@ model_collection = tibble(
     lm,
     lm,
     lmer,
+    lmer,
     lmer
   )
 )
 
 model_collection = model_collection %>% 
-  mutate(model_fit = map2(.x = formulas, .y = reg_call, ~.y(data = voting, formula = .x))) %>% 
+  mutate(model_fit = map2(.x = formulas, .y = reg_call, ~.y(data = voting, formula = .x, REML = FALSE))) %>% 
   mutate(AIC = map_dbl(.x = model_fit, .f = AIC))
 
 saveRDS(model_collection, file = 'output/model_tbl.RDS')
