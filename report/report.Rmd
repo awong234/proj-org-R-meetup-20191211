@@ -1,0 +1,48 @@
+---
+output: html_document
+title: Voting patterns over time
+---
+
+# Post-processing regressions
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(comment = NA, echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+
+library(tidyr)
+library(broom)
+library(dplyr)
+library(ggplot2)
+library(knitr)
+```
+
+```{r}
+models = readRDS('output/model_tbl.RDS')
+```
+
+## What is the slope and magnitude of the year coefficient of each state?
+
+```{r}
+tidy_interaction = models$model_fit[[2]] %>% tidy %>% mutate(type = case_when(
+  grepl(pattern = '(^year)', x = term) ~ 'slope',
+  T ~ 'intercept'
+))
+
+slopes = filter(tidy_interaction, type == 'slope')
+slopes = slopes %>% mutate(direction = case_when(
+  estimate > 0 ~ "Increasing",
+  estimate < 0 ~ "Decreasing"
+))
+
+kable(slopes)
+```
+
+## Graphics
+
+### Interaction model
+
+![](../img/voting_prop_by_state.png)
+
+### Random intercepts model
+
+![Random effects model](../img/random_effects_4_fit.png)
