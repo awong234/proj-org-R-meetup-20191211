@@ -3,6 +3,7 @@ notes/
 data/*
 output/*
 input/*
+!input/projinfo.xlsx
 *.html
 img/*
 aw-project-organization-201912_files
