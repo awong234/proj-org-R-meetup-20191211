@@ -1,0 +1,54 @@
+---
+title: "Project Organization:"
+subtitle: from headache to GNU make
+output: 
+  revealjs::revealjs_presentation:
+    theme: night
+    transition: none
+    center: true
+    self_contained: false
+    reveal_plugins: ['notes']
+    css: pres.css
+editor_options: 
+  chunk_output_type: console
+---
+
+## 
+
+
+<iframe data-src = "https://rstats.wtf/" width = 100% height = 700px></iframe>
+
+<aside class='notes'>
+Hi everyone, thank you, etc. 
+
+Clone the project in and compile all.
+
+Reproducibility x organization.
+
+Mention jenny bryan, jim
+
+Not so standard deviations 2016
+</aside>
+
+## Grad school code
+
+<div class=flexparent>
+<div class='flexchild zoom'>
+<a href = "C:\Users\AlecW\Google Drive\Active\Cornell\Moose\Data\Simulations\Adaptive Sampling\AS_R_files">
+<img src = 'images/as_scr_2.jpg'>
+</a>
+</div>
+<div class='flexchild zoom'>
+<a href = "C:\Users\AlecW\Google Drive\Active\Cornell\Moose\Data\Simulations\Scat_Counting">
+<img src = 'images/thesis_proj.jpg'>
+</a>
+</div>
+</div>
+
+<div>
+<img id='ijreaction' src = 'https://thumbs.gfycat.com/PossibleGreedyEsok-size_restricted.gif'>
+</div>
+
+<aside class='notes'>
+Nobody really taught project organization in school
+</aside>
