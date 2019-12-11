@@ -29,7 +29,7 @@ fi
 
 # Rescuscitate renv
 
-if [ ! -d renv ]
+if [ ! -d renv/library ]
 then
 	Rscript -e "renv::restore()"
 fi
