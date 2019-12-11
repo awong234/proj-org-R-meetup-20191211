@@ -4,6 +4,7 @@ library(dplyr)
 library(curl)
 library(cowplot)
 library(Cairo)
+library(magick)
 
 data = readxl::read_excel('input/projinfo.xlsx')
 
