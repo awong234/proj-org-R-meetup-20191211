@@ -17,11 +17,11 @@ source("R/transform_functions.R")
 # Import data ------------------------------------------------------------------
 
 # This is the proportion of citizens, and all inhabitants voting
-
+climessage("Reading in data: input/a5a.xlsx")
 a5a = readxl::read_excel('input/a5a.xlsx', range = "A4:O58")
 
 # Data needs cleaning ----------------------------------------------------------
-
+climessage("Cleaning data; converting from xlsx wide tabulation to tidy format")
 # The headers are from merged columns, and so the values apply to multiple columns
 a5a_headers = a5a[1:2, 2:15]
 # The data are fine, but the labels could use work and the data are in wide form.
@@ -41,7 +41,7 @@ a5a_longer = separate(a5a_longer, col = year_type, into = c("year", "type"), rem
 a5a_longer = clean_names(a5a_longer)
 
 # Write to disk ----------------------------------------------------------------
-
+climessage("Writing to file")
 vroom_write(a5a_longer, path = 'output/voting_rates.tsv')
 
 # END --------------------------------------------------------------------------

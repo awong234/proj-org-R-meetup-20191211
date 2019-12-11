@@ -15,6 +15,8 @@ url = "https://www2.census.gov/programs-surveys/cps/tables/time-series/voting-hi
 
 # Check that the url works
 
+climessage("Testing that the URL returns 200 status")
+
 status = curl::curl_fetch_memory(url)
 
 assert_that(
@@ -25,10 +27,11 @@ assert_that(
 
 # Fetch the data
 
+climessage("Downloading voting rate information to: input/a5a.xlsx")
 curl_download(url = url, destfile = 'input/a5a.xlsx')
 
 # Check that the data were downloaded correctly
-
+climessage("Test that file exists.")
 assert_that(
   file.exists('input/a5a.xlsx')
 )

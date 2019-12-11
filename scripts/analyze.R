@@ -18,8 +18,11 @@ options(device = 'x11')
 
 # Import data ------------------------------------------------------------------
 
+climessage("Importing tidy voting rate data from: output/voting_rates.tsv")
+
 voting = vroom(file = 'output/voting_rates.tsv')
 
+climessage("Filtering voting rate data by CITIZEN only")
 voting = voting %>% filter(type == 'Citizen')
 
 # Analyze ----------------------------------------------------------------------
@@ -30,27 +33,28 @@ yr = substr(sort(voting$year), start = 3, stop = 4) %>% unique
 # Has voting participation decreased over the years?
 
 # voting = split(voting, f = voting$type)
-
-vplot_wrap = 
-  voting %>% ggplot() + 
-  geom_point(aes(x = year, y = voting_rate)) + 
-  geom_line(aes(x = year, y = voting_rate)) + 
-  geom_smooth(aes(x = year, y = voting_rate), method = 'lm') + 
-  scale_x_continuous(breaks = seq(1992, 2016,by=4), labels = yr) +  
-  theme_bw() + 
+climessage("Plotting interaction model")
+vplot_wrap =
+  voting %>% ggplot() +
+  geom_point(aes(x = year, y = voting_rate)) +
+  geom_line(aes(x = year, y = voting_rate)) +
+  geom_smooth(aes(x = year, y = voting_rate), method = 'lm') +
+  scale_x_continuous(breaks = seq(1992, 2016,by=4), labels = yr) +
+  theme_bw() +
   theme(legend.position = 'bottom',
-        panel.grid.minor = element_blank()) + 
-  facet_wrap(~state) + 
+        panel.grid.minor = element_blank()) +
+  facet_wrap(~state) +
   ggtitle("Voting percentage over time, by state")
 
 # Export image
+climessage("Exporting interaction model plot to: img/voting_prop_by_state.png")
 Cairo(1920, 1620, dpi = 150, type = 'png', file = 'img/voting_prop_by_state.png')
 vplot_wrap
 dev.off()
 
 
 # Perform regressions -------------------------------------------------------
-
+climessage("Performing regressions")
 model_collection = tibble(
   'formulas' = list(
     voting_rate ~ year,
@@ -59,7 +63,7 @@ model_collection = tibble(
     voting_rate ~ year + (year | state),
     voting_rate ~ year + (1 | state),
     voting_rate ~ (1 | state) + (1| year) + year
-  ), 
+  ),
   'description' = as.character(formulas),
   'reg_call' = list(
     lm,
@@ -71,9 +75,12 @@ model_collection = tibble(
   )
 )
 
-model_collection = model_collection %>% 
-  mutate(model_fit = map2(.x = formulas, .y = reg_call, ~.y(data = voting, formula = .x, REML = FALSE))) %>% 
+climessage("Regressions include:\n{paste0(model_collection$description, collapse = '\n')}")
+
+model_collection = model_collection %>%
+  mutate(model_fit = map2(.x = formulas, .y = reg_call, ~.y(data = voting, formula = .x, REML = FALSE))) %>%
   mutate(AIC = map_dbl(.x = model_fit, .f = AIC))
 
+climessage("Writing regressions to file: output/model_tbl.RDS")
 saveRDS(model_collection, file = 'output/model_tbl.RDS')
 
