@@ -179,17 +179,18 @@ the implications of changes at least once.
 
 Intentional: 
 
-* Requires the user to define an entry point for their project
-* Packges impose a regular structure on the folders contained in a project
+* Requires the user to define an entry point for their project.
+* Packges impose a regular structure on the folders contained in a project.
 
 Codified:
 
 * `.Rproj` clearly demarcates an R project, and itself contains some settings about the project.
+* Packages heavily encourage documentation of code, in a specific format.
 
 Explicit: 
 
-* R projects and packages discourage the use of absolute paths (`{here}`)
-* R projects and packages discourage cross-folder project structures
+* R projects and packages discourage the use of absolute paths (`{here}`).
+* R projects and packages discourage cross-folder project structures.
 
 ## `renv`
 
@@ -317,7 +318,7 @@ I:
 C:
 
 * The workflow is **written down**.
-    * Much better than lexical ordering (i.e. `01_load.R`, `02_clean.R`, `03_analyze.R`).
+    * Much more actionable than lexical ordering (i.e. `01_load.R`, `02_clean.R`, `03_analyze.R`).
 
 E:
 
@@ -331,4 +332,4 @@ UNIX software design philosophy
 * Write programs that do one thing and do it well.
 * Write programs to work together.
 
-## `make` this presentation
+## `make` this presentation!
