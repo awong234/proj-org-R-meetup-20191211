@@ -220,8 +220,15 @@ Codified:
 
 Explicit: 
 
-* R projects and packages discourage the use of absolute paths (`{here}`).
-* R projects and packages discourage cross-folder project structures.
+* `roxygen2` syntax defines an explicit format for documentation
+
+```
+#' @title
+#' @description
+#' @param
+#' @returns
+#' @export
+```
 
 ## `renv`
 
