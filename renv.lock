@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "3.5.1",
+    "Version": "3.5.3",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -428,6 +428,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "a0b8854199dbfa29a71f514b3ffcddf0"
+    },
+    "revealjs": {
+      "Package": "revealjs",
+      "Version": "0.9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6bed0d4998e6287eee5feb9548ac3406"
     },
     "rlang": {
       "Package": "rlang",
