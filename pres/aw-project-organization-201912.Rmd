@@ -211,7 +211,7 @@ the implications of changes at least once.
 Intentional: 
 
 * Requires the user to define an entry point for their project.
-* Packges impose a regular structure on the folders contained in a project.
+* Packages impose a regular structure on the folders contained in a project.
 
 Codified:
 
