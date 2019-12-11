@@ -3,7 +3,7 @@
 all: data transformations analyses reports presentation
 
 clean:
-	rm input/*; rm output/*; rm report/report.html; rm img/*
+	rm input/a5a.xlsx; rm output/*; rm report/report.html; rm img/*.png; rm img/*.jpg
 
 # Data -------------------------------------------------------------------------
 
@@ -44,6 +44,8 @@ report/report.Rmd R/*
 
 presentation: pres/aw-project-organization-201912.html
 
-pres/aw-project-organization-201912.html: pres/aw-project-organization-201912.Rmd
-	Rscript -e "rmarkdown::render(input = 'pres/aw-project-organization-201912.Rmd', output_file = 'pres/aw-project-organization-201912.html', output_dir = 'pres', knit_root_dir = here::here())"
+pres/aw-project-organization-201912.html: pres/aw-project-organization-201912.Rmd img/whale-fruit-fly-plot.png
+	Rscript -e "rmarkdown::render(input = 'pres/aw-project-organization-201912.Rmd')"
 
+img/whale-fruit-fly-plot.png: img/proj-graphic.R input/projinfo.xlsx
+	Rscript img/proj-graphic.R
