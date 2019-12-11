@@ -1,0 +1,5 @@
+renv/library/
+.git/
+.Rproj.user/
+notes/
+
