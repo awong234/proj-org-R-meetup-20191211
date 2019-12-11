@@ -21,15 +21,20 @@ plot = ggplot(data %>% arrange(`Project inception`)) +
   coord_flip() +
   annotate('text', x = 8, y = first_rep$`Project inception`, label = 'First successful replication') +
   annotate('segment', x = 7.5, xend = first_rep$`Project name`, y = first_rep$`Project inception`, yend = first_rep$`Project inception`) +
-  annotate('text', x = 8, y = git_init$`Project inception`, label = 'First successful replication') +
-  annotate('segment', x = 7.5, xend = git_init$`Project name`, y = git_init$`Project inception`, yend = git_init$`Project inception`) +
-  annotate('text', x = 8, y = renv$`Project inception`, label = 'First successful replication') +
-  annotate('segment', x = 7.5, xend = renv$`Project name`, y = renv$`Project inception`, yend = renv$`Project inception`) +
-  annotate('text', x = 8, y = make$`Project inception`, label = 'First successful replication') +
-  annotate('segment', x = 7.5, xend = make$`Project name`, y = make$`Project inception`, yend = make$`Project inception`) +
+  annotate('text', x = 7.2, y = git_init$`Project inception`-40*60*60*24, label = 'git init') +
+  annotate('segment', x = 7.0, xend = git_init$`Project name`, y = git_init$`Project inception`, yend = git_init$`Project inception`) +
+  annotate('text', x = 7.0, y = renv$`Project inception`-40*60*60*24, label = 'First used {renv}') +
+  annotate('segment', x = 7.3, xend = renv$`Project name`, y = renv$`Project inception`, yend = renv$`Project inception`) +
+  annotate('text', x = 11, y = make$`Project inception`-40*60*60*24, label = 'First used {make}') +
+  annotate('segment', x = 10.7, xend = make$`Project name`, y = make$`Project inception`, yend = make$`Project inception`) +
   theme_bw() +
   theme(panel.grid = element_blank()) +
   ggtitle("Project duration decreases over time")
+
+Cairo(1920, 1080, file = 'img/proj-plot.png', type = 'png', dpi = 150)
+ggdraw() +
+  draw_plot(plot)
+dev.off()
 
 Cairo(1920, 1080, file = 'img/whale-fruit-fly-plot.png', type = 'png', dpi = 150)
 ggdraw() +
