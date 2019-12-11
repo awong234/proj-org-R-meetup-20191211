@@ -11,12 +11,22 @@ data$`Project name` = factor(data$`Project name`, levels = data$`Project name`[o
 
 data = data %>% filter(! `Project name` %in% c("'pbar'", "ga-intro-analysis"))
 
-curl_download("http://www.marinemammalcenter.org/assets/images/education/folkens/gray-whale-732x334.jpg", destfile = 'img/whale.jpg')
-curl_download("https://lydiacarline.files.wordpress.com/2012/12/fruitfly3.jpg?w=567&h=418", destfile = 'img/fruit-fly.jpg')
+first_rep = data[match(T, data$`Successful replication`), ]
+git_init  = data[match(T, data$`git init`), ]
+renv      = data[match('renv', data$`Package reproducibility`), ]
+make      = data[match(T, data$`Uses make`), ]
 
 plot = ggplot(data %>% arrange(`Project inception`)) +
   geom_errorbar(aes(x = `Project name`, ymin = `Project inception`, ymax = `Last update`, color = `Epoch`), width = 0, size = 2) +
   coord_flip() +
+  annotate('text', x = 8, y = first_rep$`Project inception`, label = 'First successful replication') +
+  annotate('segment', x = 7.5, xend = first_rep$`Project name`, y = first_rep$`Project inception`, yend = first_rep$`Project inception`) +
+  annotate('text', x = 8, y = git_init$`Project inception`, label = 'First successful replication') +
+  annotate('segment', x = 7.5, xend = git_init$`Project name`, y = git_init$`Project inception`, yend = git_init$`Project inception`) +
+  annotate('text', x = 8, y = renv$`Project inception`, label = 'First successful replication') +
+  annotate('segment', x = 7.5, xend = renv$`Project name`, y = renv$`Project inception`, yend = renv$`Project inception`) +
+  annotate('text', x = 8, y = make$`Project inception`, label = 'First successful replication') +
+  annotate('segment', x = 7.5, xend = make$`Project name`, y = make$`Project inception`, yend = make$`Project inception`) +
   theme_bw() +
   theme(panel.grid = element_blank()) +
   ggtitle("Project duration decreases over time")
