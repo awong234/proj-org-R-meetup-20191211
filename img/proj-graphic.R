@@ -5,7 +5,7 @@ library(curl)
 library(cowplot)
 library(Cairo)
 
-data = readxl::read_excel('notes/projinfo.xlsx')
+data = readxl::read_excel('input/projinfo.xlsx')
 
 data$`Project name` = factor(data$`Project name`, levels = data$`Project name`[order(data$`Project inception`)])
 
