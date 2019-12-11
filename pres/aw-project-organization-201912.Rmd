@@ -59,12 +59,12 @@ get more exposure to this
 
 <div class=flexparent>
 <div class='flexchild zoom'>
-<a href = "C:\Users\AlecW\Google Drive\Active\Cornell\Moose\Data\Simulations\Adaptive Sampling\AS_R_files">
+<a href = "C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Adaptive Sampling\AS_R_files">
 <img src = 'images/as_scr_2.jpg'>
 </a>
 </div>
 <div class='flexchild zoom'>
-<a href = "C:\Users\AlecW\Google Drive\Active\Cornell\Moose\Data\Simulations\Scat_Counting">
+<a href = "C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Scat_Counting">
 <img src = 'images/thesis_proj.jpg'>
 </a>
 </div>
