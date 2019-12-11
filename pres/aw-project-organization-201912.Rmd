@@ -18,6 +18,15 @@ knitr::opts_knit$set(root.dir = here::here())
 knitr::opts_chunk$set(comment = NA)
 ```
 
+## {data-background="http://www.fclighting.com/media/newsletter/201812-holiday/images/happy-holidays-golden-lights-wishes-card.gif"}
+
+<div style='height: 500px'>
+</div>
+
+<div class=titlecard>
+### `make`-ing spirits bright
+</div>
+
 ## 
 
 <iframe data-src = "https://rstats.wtf/" width = 100% height = 700px></iframe>
@@ -36,17 +45,39 @@ Clearly been thought about a lot before -- this is nothing new!
 
 ##
 
-<div class='flexparent'>
+<div class='flexparent vcenter'>
 <div class=flexchild>
 <img src='https://pbs.twimg.com/profile_images/1126225632034205697/e9C1so2z.png' height = 500px>
 </div>
-<div class=flexchild marginwider>
-<div style='height: 20%;'>
-</div>
+<div class='flexchild'>
+
 * Great podcast (I've listened up to ep. 17)
 * Project design comes up sometimes!
+
 </div>
 </div>
+
+## Why organize your room?
+
+<div class='flexparent vcenter'>
+
+<div class='flexchild'>
+<img src = "https://i.redd.it/vfecoqb9mn231.jpg" height = 500px >
+</div>
+
+<div class='flexchild'>
+
+> - Find things easier
+> - Reduce anxiety
+> - <span class=pop>Somebody might see it</span>
+
+</div>
+
+</div>
+
+## 
+
+<img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1191,w_2121,x_0,y_223/f_auto,q_auto,w_1100/v1555272928/shape/mentalfloss/50569-istock-486178472.jpg">
 
 ## 
 
@@ -59,12 +90,12 @@ get more exposure to this
 
 <div class=flexparent>
 <div class='flexchild zoom'>
-<a href = "C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Adaptive Sampling\AS_R_files">
+<a href = "file:\\C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Adaptive Sampling\AS_R_files">
 <img src = 'images/as_scr_2.jpg'>
 </a>
 </div>
 <div class='flexchild zoom'>
-<a href = "C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Scat_Counting">
+<a href = "file:\\C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Scat_Counting">
 <img src = 'images/thesis_proj.jpg'>
 </a>
 </div>

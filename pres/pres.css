@@ -9,6 +9,17 @@
   flex: 1;
 }
 
+
+
+.flexchild {
+  /* flex: 1; */
+  margin: 0px,20px,0px,20px;
+}
+
+.flexparent.vcenter {
+  align-items: center;
+}
+
 #ijreaction {
   position: absolute; 
   bottom: 0;
@@ -37,4 +48,12 @@
 
 .bigcode {
   font-size: 15 !important;
+}
+
+.titlecard {
+  background-color: rgb(255, 0, 0, .50);
+}
+
+.pop {
+  color: orange;
 }
