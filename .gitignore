@@ -1,10 +1,4 @@
 notes/
 .Rproj.user
-data/*
-output/*
-input/*
 !input/projinfo.xlsx
-*.html
-img/*
-!img/*.R
 aw-project-organization-201912_files

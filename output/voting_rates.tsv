@@ -1,0 +1,715 @@
+state	year	type	voting_rate
+Alabama	2016	Total	56.371200000000002
+Alabama	2016	Citizen	57.383000000000003
+Alabama	2012	Total	59.9
+Alabama	2012	Citizen	61.9
+Alabama	2008	Total	60.8
+Alabama	2008	Citizen	62.4
+Alabama	2004	Total	61.8
+Alabama	2004	Citizen	63.2
+Alabama	2000	Total	59.6
+Alabama	2000	Citizen	60.4
+Alabama	1996	Total	55.6
+Alabama	1996	Citizen	56.3
+Alabama	1992	Total	63.6
+Alabama	1992	Citizen	64.400000000000006
+Alaska	2016	Total	59.406100000000002
+Alaska	2016	Citizen	61.331299999999999
+Alaska	2012	Total	56
+Alaska	2012	Citizen	58.4
+Alaska	2008	Total	62.4
+Alaska	2008	Citizen	65
+Alaska	2004	Total	65
+Alaska	2004	Citizen	67.599999999999994
+Alaska	2000	Total	65.5
+Alaska	2000	Citizen	67.7
+Alaska	1996	Total	59.5
+Alaska	1996	Citizen	60.5
+Alaska	1992	Total	68.599999999999994
+Alaska	1992	Citizen	74
+Arizona	2016	Total	53.287999999999997
+Arizona	2016	Citizen	60.397199999999998
+Arizona	2012	Total	49.6
+Arizona	2012	Citizen	55.9
+Arizona	2008	Total	53.3
+Arizona	2008	Citizen	59.9
+Arizona	2004	Total	54.3
+Arizona	2004	Citizen	63.8
+Arizona	2000	Total	46.7
+Arizona	2000	Citizen	52.5
+Arizona	1996	Total	47.3
+Arizona	1996	Citizen	54.3
+Arizona	1992	Total	64.7
+Arizona	1992	Citizen	69.7
+Arkansas	2016	Total	56.010599999999997
+Arkansas	2016	Citizen	58.668300000000002
+Arkansas	2012	Total	51.1
+Arkansas	2012	Citizen	53.3
+Arkansas	2008	Total	51.8
+Arkansas	2008	Citizen	53.8
+Arkansas	2004	Total	56.7
+Arkansas	2004	Citizen	58.7
+Arkansas	2000	Total	49.4
+Arkansas	2000	Citizen	50.6
+Arkansas	1996	Total	51.5
+Arkansas	1996	Citizen	51.9
+Arkansas	1992	Total	58
+Arkansas	1992	Citizen	60.5
+California	2016	Total	48.224699999999999
+California	2016	Citizen	57.919600000000003
+California	2012	Total	47.5
+California	2012	Citizen	57.5
+California	2008	Total	51.2
+California	2008	Citizen	63.4
+California	2004	Total	49.1
+California	2004	Citizen	61.9
+California	2000	Total	46.4
+California	2000	Citizen	57.9
+California	1996	Total	48.4
+California	1996	Citizen	61.3
+California	1992	Total	52.8
+California	1992	Citizen	70.099999999999994
+Colorado	2016	Total	63.8187
+Colorado	2016	Citizen	69.488799999999998
+Colorado	2012	Total	65.400000000000006
+Colorado	2012	Citizen	70.400000000000006
+Colorado	2008	Total	62.5
+Colorado	2008	Citizen	68.400000000000006
+Colorado	2004	Total	61.7
+Colorado	2004	Citizen	67.5
+Colorado	2000	Total	53.6
+Colorado	2000	Citizen	57.2
+Colorado	1996	Total	58.8
+Colorado	1996	Citizen	61.1
+Colorado	1992	Total	68.8
+Colorado	1992	Citizen	72.7
+Connecticut	2016	Total	57.488999999999997
+Connecticut	2016	Citizen	63.870100000000001
+Connecticut	2012	Total	57.5
+Connecticut	2012	Citizen	62.7
+Connecticut	2008	Total	60.8
+Connecticut	2008	Citizen	67.2
+Connecticut	2004	Total	58.5
+Connecticut	2004	Citizen	63.2
+Connecticut	2000	Total	55.2
+Connecticut	2000	Citizen	59.5
+Connecticut	1996	Total	58.5
+Connecticut	1996	Citizen	62.3
+Connecticut	1992	Total	71.7
+Connecticut	1992	Citizen	78.8
+Delaware	2016	Total	57.170900000000003
+Delaware	2016	Citizen	62.298099999999998
+Delaware	2012	Total	62.2
+Delaware	2012	Citizen	67.3
+Delaware	2008	Total	63
+Delaware	2008	Citizen	67.3
+Delaware	2004	Total	62.8
+Delaware	2004	Citizen	66.400000000000006
+Delaware	2000	Total	62.2
+Delaware	2000	Citizen	64.8
+Delaware	1996	Total	54.7
+Delaware	1996	Citizen	56.1
+Delaware	1992	Total	66.099999999999994
+Delaware	1992	Citizen	71.099999999999994
+District of Columbia	2016	Total	68.723200000000006
+District of Columbia	2016	Citizen	74.336299999999994
+District of Columbia	2012	Total	67.7
+District of Columbia	2012	Citizen	75.900000000000006
+District of Columbia	2008	Total	65.3
+District of Columbia	2008	Citizen	74.099999999999994
+District of Columbia	2004	Total	62
+District of Columbia	2004	Citizen	69.2
+District of Columbia	2000	Total	65.599999999999994
+District of Columbia	2000	Citizen	71.7
+District of Columbia	1996	Total	59.6
+District of Columbia	1996	Citizen	63.5
+District of Columbia	1992	Total	66.099999999999994
+District of Columbia	1992	Citizen	72.5
+Florida	2016	Total	52.942799999999998
+Florida	2016	Citizen	59.453099999999999
+Florida	2012	Total	53.9
+Florida	2012	Citizen	60.8
+Florida	2008	Total	56.5
+Florida	2008	Citizen	63.8
+Florida	2004	Total	56.1
+Florida	2004	Citizen	64.3
+Florida	2000	Total	51.6
+Florida	2000	Citizen	59.6
+Florida	1996	Total	50.7
+Florida	1996	Citizen	56.4
+Florida	1992	Total	55.8
+Florida	1992	Citizen	63.5
+Georgia	2016	Total	55.677199999999999
+Georgia	2016	Citizen	60.242899999999999
+Georgia	2012	Total	58.1
+Georgia	2012	Citizen	61.9
+Georgia	2008	Total	59.6
+Georgia	2008	Citizen	64.2
+Georgia	2004	Total	52.6
+Georgia	2004	Citizen	56.8
+Georgia	2000	Total	49
+Georgia	2000	Citizen	50.9
+Georgia	1996	Total	49.6
+Georgia	1996	Citizen	50.9
+Georgia	1992	Total	54.1
+Georgia	1992	Citizen	57.3
+Hawaii	2016	Total	43.274799999999999
+Hawaii	2016	Citizen	47.270200000000003
+Hawaii	2012	Total	47.4
+Hawaii	2012	Citizen	51.6
+Hawaii	2008	Total	46.8
+Hawaii	2008	Citizen	51.8
+Hawaii	2004	Total	46.2
+Hawaii	2004	Citizen	50.8
+Hawaii	2000	Total	39.700000000000003
+Hawaii	2000	Citizen	44.1
+Hawaii	1996	Total	43.1
+Hawaii	1996	Citizen	47.4
+Hawaii	1992	Total	55.2
+Hawaii	1992	Citizen	61.9
+Idaho	2016	Total	58.295299999999997
+Idaho	2016	Citizen	62.069600000000001
+Idaho	2012	Total	60.2
+Idaho	2012	Citizen	63.9
+Idaho	2008	Total	58.8
+Idaho	2008	Citizen	61.4
+Idaho	2004	Total	58.7
+Idaho	2004	Citizen	61.6
+Idaho	2000	Total	53.9
+Idaho	2000	Citizen	56.1
+Idaho	1996	Total	60.1
+Idaho	1996	Citizen	62
+Idaho	1992	Total	66.900000000000006
+Idaho	1992	Citizen	70.8
+Illinois	2016	Total	58.825600000000001
+Illinois	2016	Citizen	63.759599999999999
+Illinois	2012	Total	56.2
+Illinois	2012	Citizen	61.5
+Illinois	2008	Total	57.1
+Illinois	2008	Citizen	62.6
+Illinois	2004	Total	61
+Illinois	2004	Citizen	65.599999999999994
+Illinois	2000	Total	56.8
+Illinois	2000	Citizen	62
+Illinois	1996	Total	55.6
+Illinois	1996	Citizen	59.1
+Illinois	1992	Total	65.099999999999994
+Illinois	1992	Citizen	72.3
+Indiana	2016	Total	56.0321
+Indiana	2016	Citizen	58.2821
+Indiana	2012	Total	57.7
+Indiana	2012	Citizen	59.3
+Indiana	2008	Total	58.8
+Indiana	2008	Citizen	60.5
+Indiana	2004	Total	57.3
+Indiana	2004	Citizen	58.6
+Indiana	2000	Total	58.5
+Indiana	2000	Citizen	59.6
+Indiana	1996	Total	55.8
+Indiana	1996	Citizen	56.5
+Indiana	1992	Total	63
+Indiana	1992	Citizen	64.400000000000006
+Iowa	2016	Total	60.738100000000003
+Iowa	2016	Citizen	63.436500000000002
+Iowa	2012	Total	66.7
+Iowa	2012	Citizen	69.400000000000006
+Iowa	2008	Total	66.900000000000006
+Iowa	2008	Citizen	70.2
+Iowa	2004	Total	68.8
+Iowa	2004	Citizen	71.3
+Iowa	2000	Total	64.099999999999994
+Iowa	2000	Citizen	67.400000000000006
+Iowa	1996	Total	61.1
+Iowa	1996	Citizen	63
+Iowa	1992	Total	70.8
+Iowa	1992	Citizen	72.8
+Kansas	2016	Total	58.030299999999997
+Kansas	2016	Citizen	61.264299999999999
+Kansas	2012	Total	58.9
+Kansas	2012	Citizen	63.3
+Kansas	2008	Total	59.8
+Kansas	2008	Citizen	63.3
+Kansas	2004	Total	59.7
+Kansas	2004	Citizen	64.2
+Kansas	2000	Total	60.2
+Kansas	2000	Citizen	61.7
+Kansas	1996	Total	62
+Kansas	1996	Citizen	63.4
+Kansas	1992	Total	71.900000000000006
+Kansas	1992	Citizen	73.8
+Kentucky	2016	Total	55.257599999999996
+Kentucky	2016	Citizen	56.982700000000001
+Kentucky	2012	Total	57.6
+Kentucky	2012	Citizen	59.3
+Kentucky	2008	Total	61.4
+Kentucky	2008	Citizen	63.1
+Kentucky	2004	Total	63.4
+Kentucky	2004	Citizen	65
+Kentucky	2000	Total	54.9
+Kentucky	2000	Citizen	56.4
+Kentucky	1996	Total	52.8
+Kentucky	1996	Citizen	53
+Kentucky	1992	Total	57.6
+Kentucky	1992	Citizen	61.4
+Louisiana	2016	Total	59.688400000000001
+Louisiana	2016	Citizen	61.642499999999998
+Louisiana	2012	Total	64.7
+Louisiana	2012	Citizen	66.3
+Louisiana	2008	Total	68
+Louisiana	2008	Citizen	70.3
+Louisiana	2004	Total	63.1
+Louisiana	2004	Citizen	64.2
+Louisiana	2000	Total	64.599999999999994
+Louisiana	2000	Citizen	65.7
+Louisiana	1996	Total	61.8
+Louisiana	1996	Citizen	62.7
+Louisiana	1992	Total	68.599999999999994
+Louisiana	1992	Citizen	71
+Maine	2016	Total	71.301400000000001
+Maine	2016	Citizen	72.676699999999997
+Maine	2012	Total	67.2
+Maine	2012	Citizen	68.599999999999994
+Maine	2008	Total	70.2
+Maine	2008	Citizen	71.2
+Maine	2004	Total	72
+Maine	2004	Citizen	73.099999999999994
+Maine	2000	Total	69.2
+Maine	2000	Citizen	70.099999999999994
+Maine	1996	Total	67.7
+Maine	1996	Citizen	69.400000000000006
+Maine	1992	Total	74.099999999999994
+Maine	1992	Citizen	76.7
+Maryland	2016	Total	59.195799999999998
+Maryland	2016	Citizen	65.825900000000004
+Maryland	2012	Total	58.7
+Maryland	2012	Citizen	65.099999999999994
+Maryland	2008	Total	61.9
+Maryland	2008	Citizen	68.3
+Maryland	2004	Total	59.7
+Maryland	2004	Citizen	65.599999999999994
+Maryland	2000	Total	57.1
+Maryland	2000	Citizen	61.1
+Maryland	1996	Total	54.4
+Maryland	1996	Citizen	57.2
+Maryland	1992	Total	66.400000000000006
+Maryland	1992	Citizen	71.7
+Massachusetts	2016	Total	61.687899999999999
+Massachusetts	2016	Citizen	66.733699999999999
+Massachusetts	2012	Total	65.400000000000006
+Massachusetts	2012	Citizen	70.8
+Massachusetts	2008	Total	61.3
+Massachusetts	2008	Citizen	67.099999999999994
+Massachusetts	2004	Total	63.7
+Massachusetts	2004	Citizen	68.599999999999994
+Massachusetts	2000	Total	60.1
+Massachusetts	2000	Citizen	65.3
+Massachusetts	1996	Total	56.3
+Massachusetts	1996	Citizen	60.8
+Massachusetts	1992	Total	65.8
+Massachusetts	1992	Citizen	73.8
+Michigan	2016	Total	61.814
+Michigan	2016	Citizen	64.276399999999995
+Michigan	2012	Total	64.5
+Michigan	2012	Citizen	66.8
+Michigan	2008	Total	65
+Michigan	2008	Citizen	67.8
+Michigan	2004	Total	64.7
+Michigan	2004	Citizen	67.099999999999994
+Michigan	2000	Total	60.1
+Michigan	2000	Citizen	62.4
+Michigan	1996	Total	58.1
+Michigan	1996	Citizen	59.9
+Michigan	1992	Total	65.900000000000006
+Michigan	1992	Citizen	71.099999999999994
+Minnesota	2016	Total	65.349400000000003
+Minnesota	2016	Citizen	68.713099999999997
+Minnesota	2012	Total	70.5
+Minnesota	2012	Citizen	73.2
+Minnesota	2008	Total	70.8
+Minnesota	2008	Citizen	75
+Minnesota	2004	Total	76.7
+Minnesota	2004	Citizen	79.2
+Minnesota	2000	Total	67.8
+Minnesota	2000	Citizen	69.8
+Minnesota	1996	Total	66.900000000000006
+Minnesota	1996	Citizen	68.900000000000006
+Minnesota	1992	Total	74.2
+Minnesota	1992	Citizen	78.3
+Mississippi	2016	Total	66.704800000000006
+Mississippi	2016	Citizen	67.727999999999994
+Mississippi	2012	Total	73.3
+Mississippi	2012	Citizen	74.5
+Mississippi	2008	Total	68.2
+Mississippi	2008	Citizen	69.7
+Mississippi	2004	Total	60.7
+Mississippi	2004	Citizen	61.7
+Mississippi	2000	Total	59.8
+Mississippi	2000	Citizen	60.6
+Mississippi	1996	Total	55.1
+Mississippi	1996	Citizen	55.5
+Mississippi	1992	Total	66.7
+Mississippi	1992	Citizen	68
+Missouri	2016	Total	62.8172
+Missouri	2016	Citizen	64.768000000000001
+Missouri	2012	Total	62.3
+Missouri	2012	Citizen	63.9
+Missouri	2008	Total	64.2
+Missouri	2008	Citizen	65.8
+Missouri	2004	Total	66.3
+Missouri	2004	Citizen	68.5
+Missouri	2000	Total	65.400000000000006
+Missouri	2000	Citizen	66.7
+Missouri	1996	Total	61.1
+Missouri	1996	Citizen	61.6
+Missouri	1992	Total	66.2
+Missouri	1992	Citizen	68.3
+Montana	2016	Total	65.246700000000004
+Montana	2016	Citizen	65.879499999999993
+Montana	2012	Total	64.5
+Montana	2012	Citizen	65.7
+Montana	2008	Total	64.7
+Montana	2008	Citizen	65.400000000000006
+Montana	2004	Total	69.900000000000006
+Montana	2004	Citizen	70.2
+Montana	2000	Total	62.2
+Montana	2000	Citizen	62.9
+Montana	1996	Total	67.3
+Montana	1996	Citizen	68.099999999999994
+Montana	1992	Total	71.400000000000006
+Montana	1992	Citizen	73.400000000000006
+Nebraska	2016	Total	63.428199999999997
+Nebraska	2016	Citizen	66.786799999999999
+Nebraska	2012	Total	58.2
+Nebraska	2012	Citizen	61.6
+Nebraska	2008	Total	64.5
+Nebraska	2008	Citizen	67.3
+Nebraska	2004	Total	61.3
+Nebraska	2004	Citizen	65.3
+Nebraska	2000	Total	58.9
+Nebraska	2000	Citizen	60.3
+Nebraska	1996	Total	61
+Nebraska	1996	Citizen	62.7
+Nebraska	1992	Total	66.099999999999994
+Nebraska	1992	Citizen	67.599999999999994
+Nevada	2016	Total	53.496200000000002
+Nevada	2016	Citizen	60.502400000000002
+Nevada	2012	Total	51.4
+Nevada	2012	Citizen	57.9
+Nevada	2008	Total	52.8
+Nevada	2008	Citizen	59.9
+Nevada	2004	Total	51.3
+Nevada	2004	Citizen	58.9
+Nevada	2000	Total	46.5
+Nevada	2000	Citizen	52.1
+Nevada	1996	Total	47.8
+Nevada	1996	Citizen	53.3
+Nevada	1992	Total	58.1
+Nevada	1992	Citizen	64.5
+New Hampshire	2016	Total	66.852400000000003
+New Hampshire	2016	Citizen	68.964200000000005
+New Hampshire	2012	Total	66.900000000000006
+New Hampshire	2012	Citizen	69.400000000000006
+New Hampshire	2008	Total	69.8
+New Hampshire	2008	Citizen	71.2
+New Hampshire	2004	Total	68.900000000000006
+New Hampshire	2004	Citizen	71.5
+New Hampshire	2000	Total	63.3
+New Hampshire	2000	Citizen	66.599999999999994
+New Hampshire	1996	Total	60.1
+New Hampshire	1996	Citizen	61
+New Hampshire	1992	Total	64.599999999999994
+New Hampshire	1992	Citizen	67.599999999999994
+New Jersey	2016	Total	53.41
+New Jersey	2016	Citizen	61.519599999999997
+New Jersey	2012	Total	54.5
+New Jersey	2012	Citizen	61.9
+New Jersey	2008	Total	56
+New Jersey	2008	Citizen	64.099999999999994
+New Jersey	2004	Total	57.6
+New Jersey	2004	Citizen	66
+New Jersey	2000	Total	55.2
+New Jersey	2000	Citizen	61.8
+New Jersey	1996	Total	54.7
+New Jersey	1996	Citizen	60.6
+New Jersey	1992	Total	61.2
+New Jersey	1992	Citizen	70
+New Mexico	2016	Total	49.445500000000003
+New Mexico	2016	Citizen	54.793799999999997
+New Mexico	2012	Total	56.5
+New Mexico	2012	Citizen	61.6
+New Mexico	2008	Total	57.4
+New Mexico	2008	Citizen	62.6
+New Mexico	2004	Total	60.9
+New Mexico	2004	Citizen	64.400000000000006
+New Mexico	2000	Total	51.3
+New Mexico	2000	Citizen	54.4
+New Mexico	1996	Total	51.7
+New Mexico	1996	Citizen	55.5
+New Mexico	1992	Total	62.6
+New Mexico	1992	Citizen	66.7
+New York	2016	Total	50.746899999999997
+New York	2016	Citizen	57.223300000000002
+New York	2012	Total	50.9
+New York	2012	Citizen	58.7
+New York	2008	Total	51.5
+New York	2008	Citizen	58.8
+New York	2004	Total	53.1
+New York	2004	Citizen	60.2
+New York	2000	Total	51
+New York	2000	Citizen	59
+New York	1996	Total	50.9
+New York	1996	Citizen	58.7
+New York	1992	Total	56.8
+New York	1992	Citizen	67.7
+North Carolina	2016	Total	61.597299999999997
+North Carolina	2016	Citizen	67.532499999999999
+North Carolina	2012	Total	63.7
+North Carolina	2012	Citizen	68.900000000000006
+North Carolina	2008	Total	63.8
+North Carolina	2008	Citizen	67.5
+North Carolina	2004	Total	58.2
+North Carolina	2004	Citizen	61.4
+North Carolina	2000	Total	53.2
+North Carolina	2000	Citizen	56.1
+North Carolina	1996	Total	54
+North Carolina	1996	Citizen	55.5
+North Carolina	1992	Total	60
+North Carolina	1992	Citizen	62.6
+North Dakota	2016	Total	62.137099999999997
+North Dakota	2016	Citizen	64.171400000000006
+North Dakota	2012	Total	62.2
+North Dakota	2012	Citizen	63.9
+North Dakota	2008	Total	66.3
+North Dakota	2008	Citizen	67.5
+North Dakota	2004	Total	70.8
+North Dakota	2004	Citizen	71.5
+North Dakota	2000	Total	69.8
+North Dakota	2000	Citizen	70.400000000000006
+North Dakota	1996	Total	65.8
+North Dakota	1996	Citizen	66.099999999999994
+North Dakota	1992	Total	71.099999999999994
+North Dakota	1992	Citizen	72.8
+Ohio	2016	Total	61.380099999999999
+Ohio	2016	Citizen	63.635899999999999
+Ohio	2012	Total	61.7
+Ohio	2012	Citizen	63.1
+Ohio	2008	Total	64.5
+Ohio	2008	Citizen	65.5
+Ohio	2004	Total	64.8
+Ohio	2004	Citizen	66.099999999999994
+Ohio	2000	Total	58.1
+Ohio	2000	Citizen	59.2
+Ohio	1996	Total	58.7
+Ohio	1996	Citizen	59.6
+Ohio	1992	Total	64.3
+Ohio	1992	Citizen	69.099999999999994
+Oklahoma	2016	Total	53.186
+Oklahoma	2016	Citizen	56.622399999999999
+Oklahoma	2012	Total	51
+Oklahoma	2012	Citizen	52.4
+Oklahoma	2008	Total	56.5
+Oklahoma	2008	Citizen	58.7
+Oklahoma	2004	Total	59.2
+Oklahoma	2004	Citizen	62.3
+Oklahoma	2000	Total	58.3
+Oklahoma	2000	Citizen	59.7
+Oklahoma	1996	Total	58.5
+Oklahoma	1996	Citizen	59.2
+Oklahoma	1992	Total	67.5
+Oklahoma	1992	Citizen	70.5
+Oregon	2016	Total	60.972700000000003
+Oregon	2016	Citizen	66.308000000000007
+Oregon	2012	Total	63.3
+Oregon	2012	Citizen	67.599999999999994
+Oregon	2008	Total	62.6
+Oregon	2008	Citizen	67.599999999999994
+Oregon	2004	Total	70.599999999999994
+Oregon	2004	Citizen	74
+Oregon	2000	Total	60.8
+Oregon	2000	Citizen	66.599999999999994
+Oregon	1996	Total	61.1
+Oregon	1996	Citizen	63.6
+Oregon	1992	Total	69.099999999999994
+Oregon	1992	Citizen	73.900000000000006
+Pennsylvania	2016	Total	60.201900000000002
+Pennsylvania	2016	Citizen	62.610300000000002
+Pennsylvania	2012	Total	59.1
+Pennsylvania	2012	Citizen	61.6
+Pennsylvania	2008	Total	60.8
+Pennsylvania	2008	Citizen	62.4
+Pennsylvania	2004	Total	62.5
+Pennsylvania	2004	Citizen	64.5
+Pennsylvania	2000	Total	55.7
+Pennsylvania	2000	Citizen	57.4
+Pennsylvania	1996	Total	55
+Pennsylvania	1996	Citizen	56.4
+Pennsylvania	1992	Total	59.9
+Pennsylvania	1992	Citizen	62.1
+Rhode Island	2016	Total	55.5182
+Rhode Island	2016	Citizen	60.5989
+Rhode Island	2012	Total	57.4
+Rhode Island	2012	Citizen	62.5
+Rhode Island	2008	Total	63
+Rhode Island	2008	Citizen	67.400000000000006
+Rhode Island	2004	Total	57.4
+Rhode Island	2004	Citizen	63.7
+Rhode Island	2000	Total	60.1
+Rhode Island	2000	Citizen	63.5
+Rhode Island	1996	Total	60.6
+Rhode Island	1996	Citizen	64.3
+Rhode Island	1992	Total	69
+Rhode Island	1992	Citizen	75.099999999999994
+South Carolina	2016	Total	59.821800000000003
+South Carolina	2016	Citizen	62.062399999999997
+South Carolina	2012	Total	62.2
+South Carolina	2012	Citizen	64.7
+South Carolina	2008	Total	63.4
+South Carolina	2008	Citizen	65.599999999999994
+South Carolina	2004	Total	62
+South Carolina	2004	Citizen	63.2
+South Carolina	2000	Total	58.9
+South Carolina	2000	Citizen	59.5
+South Carolina	1996	Total	54.5
+South Carolina	1996	Citizen	54.7
+South Carolina	1992	Total	58
+South Carolina	1992	Citizen	59.3
+South Dakota	2016	Total	57.336799999999997
+South Dakota	2016	Citizen	59.115200000000002
+South Dakota	2012	Total	60.1
+South Dakota	2012	Citizen	61
+South Dakota	2008	Total	66.099999999999994
+South Dakota	2008	Citizen	67.8
+South Dakota	2004	Total	67.099999999999994
+South Dakota	2004	Citizen	68.3
+South Dakota	2000	Total	58.7
+South Dakota	2000	Citizen	59.2
+South Dakota	1996	Total	64.3
+South Dakota	1996	Citizen	64.8
+South Dakota	1992	Total	70.2
+South Dakota	1992	Citizen	71.8
+Tennessee	2016	Total	52.020099999999999
+Tennessee	2016	Citizen	53.993499999999997
+Tennessee	2012	Total	53.7
+Tennessee	2012	Citizen	55.7
+Tennessee	2008	Total	53.6
+Tennessee	2008	Citizen	55.5
+Tennessee	2004	Total	52.7
+Tennessee	2004	Citizen	54.6
+Tennessee	2000	Total	52.3
+Tennessee	2000	Citizen	53.7
+Tennessee	1996	Total	53.1
+Tennessee	1996	Citizen	53.6
+Tennessee	1992	Total	55.6
+Tennessee	1992	Citizen	56.8
+Texas	2016	Total	47.720399999999998
+Texas	2016	Citizen	55.394500000000001
+Texas	2012	Total	46.4
+Texas	2012	Citizen	53.8
+Texas	2008	Total	48.8
+Texas	2008	Citizen	56.1
+Texas	2004	Total	50.3
+Texas	2004	Citizen	57.1
+Texas	2000	Total	48.2
+Texas	2000	Citizen	54.1
+Texas	1996	Total	46.2
+Texas	1996	Citizen	51.5
+Texas	1992	Total	55.6
+Texas	1992	Citizen	62.3
+Utah	2016	Total	58.876399999999997
+Utah	2016	Citizen	62.682600000000001
+Utah	2012	Total	53.3
+Utah	2012	Citizen	57
+Utah	2008	Total	50.5
+Utah	2008	Citizen	53.1
+Utah	2004	Total	62.8
+Utah	2004	Citizen	67.8
+Utah	2000	Total	56.3
+Utah	2000	Citizen	60.2
+Utah	1996	Total	53
+Utah	1996	Citizen	55.5
+Utah	1992	Total	72.3
+Utah	1992	Citizen	75.8
+Vermont	2016	Total	61.049799999999998
+Vermont	2016	Citizen	62.475999999999999
+Vermont	2012	Total	62.1
+Vermont	2012	Citizen	63.3
+Vermont	2008	Total	63.2
+Vermont	2008	Citizen	64.7
+Vermont	2004	Total	65.400000000000006
+Vermont	2004	Citizen	67.3
+Vermont	2000	Total	63.3
+Vermont	2000	Citizen	64.2
+Vermont	1996	Total	59.5
+Vermont	1996	Citizen	60.4
+Vermont	1992	Total	68.599999999999994
+Vermont	1992	Citizen	73.400000000000006
+Virginia	2016	Total	62.635300000000001
+Virginia	2016	Citizen	68.160300000000007
+Virginia	2012	Total	62
+Virginia	2012	Citizen	66.900000000000006
+Virginia	2008	Total	63.8
+Virginia	2008	Citizen	68.7
+Virginia	2004	Total	58.4
+Virginia	2004	Citizen	63.1
+Virginia	2000	Total	57.2
+Virginia	2000	Citizen	60.3
+Virginia	1996	Total	56.4
+Virginia	1996	Citizen	58.4
+Virginia	1992	Total	61.2
+Virginia	1992	Citizen	64.3
+Washington	2016	Total	60.480800000000002
+Washington	2016	Citizen	66.265799999999999
+Washington	2012	Total	60.7
+Washington	2012	Citizen	65.599999999999994
+Washington	2008	Total	62.6
+Washington	2008	Citizen	66.8
+Washington	2004	Total	62
+Washington	2004	Citizen	67.599999999999994
+Washington	2000	Total	58.6
+Washington	2000	Citizen	62
+Washington	1996	Total	60
+Washington	1996	Citizen	62.3
+Washington	1992	Total	66.3
+Washington	1992	Citizen	70.3
+West Virginia	2016	Total	50.4223
+West Virginia	2016	Citizen	50.766399999999997
+West Virginia	2012	Total	47.5
+West Virginia	2012	Citizen	47.8
+West Virginia	2008	Total	53.1
+West Virginia	2008	Citizen	53.4
+West Virginia	2004	Total	57.2
+West Virginia	2004	Citizen	57.2
+West Virginia	2000	Total	52.1
+West Virginia	2000	Citizen	52.4
+West Virginia	1996	Total	50.2
+West Virginia	1996	Citizen	50.6
+West Virginia	1992	Total	57.3
+West Virginia	1992	Citizen	58.5
+Wisconsin	2016	Total	68.703800000000001
+Wisconsin	2016	Citizen	70.4572
+Wisconsin	2012	Total	71.900000000000006
+Wisconsin	2012	Citizen	73.599999999999994
+Wisconsin	2008	Total	68.5
+Wisconsin	2008	Citizen	71.2
+Wisconsin	2004	Total	73
+Wisconsin	2004	Citizen	76.599999999999994
+Wisconsin	2000	Total	67.8
+Wisconsin	2000	Citizen	70.099999999999994
+Wisconsin	1996	Total	62.4
+Wisconsin	1996	Citizen	64.8
+Wisconsin	1992	Total	75.3
+Wisconsin	1992	Citizen	77
+Wyoming	2016	Total	63.526299999999999
+Wyoming	2016	Citizen	64.803299999999993
+Wyoming	2012	Total	57.8
+Wyoming	2012	Citizen	58.9
+Wyoming	2008	Total	62.9
+Wyoming	2008	Citizen	64.3
+Wyoming	2004	Total	66.3
+Wyoming	2004	Citizen	66.900000000000006
+Wyoming	2000	Total	62.5
+Wyoming	2000	Citizen	62.9
+Wyoming	1996	Total	66.2
+Wyoming	1996	Citizen	66.7
+Wyoming	1992	Total	64.2
+Wyoming	1992	Citizen	66.5

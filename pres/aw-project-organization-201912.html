@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Project Organization:</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="aw-project-organization-201912_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="aw-project-organization-201912_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="pres.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Project Organization:</h1>
+  <h1 class="subtitle">from headache to GNU make</h1>
+</section>
+
+<section id="section" class="slide level2" data-background="http://www.fclighting.com/media/newsletter/201812-holiday/images/happy-holidays-golden-lights-wishes-card.gif">
+<h2></h2>
+<div style="height: 500px">
+
+</div>
+<div class="titlecard">
+<h3 id="make-ing-spirits-bright"><code>make</code>-ing spirits bright</h3>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<iframe data-src="https://rstats.wtf/" width="100%" height="700px">
+</iframe>
+<aside class="notes">
+<p>Hi everyone, thank you, etc.</p>
+<p>Clone the project in and compile all.</p>
+<p>Reproducibility x organization.</p>
+<p>Inspiration: jenny bryan, jim, Not so standard deviations 2016</p>
+Clearly been thought about a lot before – this is nothing new!
+</aside>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="flexparent vcenter">
+<div class="flexchild">
+<p><img src='https://pbs.twimg.com/profile_images/1126225632034205697/e9C1so2z.png' height = 500px></p>
+</div>
+<div class="flexchild">
+<ul>
+<li>Great podcast (I’ve listened up to ep. 17)</li>
+<li>Project design comes up sometimes!</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="why-organize-your-room" class="slide level2">
+<h2>Why organize your room?</h2>
+<div class="flexparent vcenter">
+<div class="flexchild">
+<p><img src = "https://i.redd.it/vfecoqb9mn231.jpg" height = 500px ></p>
+</div>
+<div class="flexchild">
+<ul>
+<li class="fragment">Find things easier</li>
+<li class="fragment">Reduce anxiety</li>
+<li class="fragment"><span class="pop">Somebody might see it</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1191,w_2121,x_0,y_223/f_auto,q_auto,w_1100/v1555272928/shape/mentalfloss/50569-istock-486178472.jpg"></p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<aside class="notes">
+<p>So this is more <em>descriptive</em>, and less <em>prescriptive</em>;</p>
+I wasn’t taught this in school, and if you’re like me it would have been nice to get more exposure to this
+</aside>
+<div class="flexparent">
+<div class="flexchild zoom">
+<p><a href = "file:\\C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Adaptive Sampling\AS_R_files"> <img src = 'images/as_scr_2.jpg'> </a></p>
+</div>
+<div class="flexchild zoom">
+<p><a href = "file:\\C:\Users\aw685\Google Drive\Active\Cornell\Moose\Data\Simulations\Scat_Counting"> <img src = 'images/thesis_proj.jpg'> </a></p>
+</div>
+</div>
+<div>
+<p><img id='ijreaction' src = 'https://thumbs.gfycat.com/PossibleGreedyEsok-size_restricted.gif'></p>
+</div>
+</section>
+<section id="grad-school-code" class="slide level2">
+<h2>Grad school code</h2>
+<p>What’s especially wrong with it?</p>
+<p><em>Modus operandi</em></p>
+<blockquote>
+<p>“I’m the only one who’s going to <em>really</em> use this, so I can be lazy about the organization.”</p>
+</blockquote>
+</section>
+<section id="bad-design" class="slide level2">
+<h2>Bad design</h2>
+<p><em>Probably</em> not reproducible</p>
+<ul>
+<li>Not especially well documented, particularly at first</li>
+<li>Ambiguity in file naming &amp; authoritative versions</li>
+<li>Projects aren’t self-contained</li>
+<li>Nothing about R install or packages were recorded!</li>
+<li>Hard paths, etc.</li>
+</ul>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+<p>and their “induced philosophies”</p>
+<p><code>git</code>, <code>.Rproj</code>, <code>make</code>, <code>renv</code></p>
+<aside class="notes">
+I picked up a number of tools along the way, and I feel
+</aside>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<h3 id="characteristics-of-implementations-leading-to-good-project-design">Characteristics of implementations <br /> leading to good project design</h3>
+<ul>
+<li>Intentional</li>
+<li>Codified</li>
+<li>Explicit</li>
+</ul>
+</section>
+<section id="project-evolution" class="slide level2">
+<h2>Project evolution</h2>
+<p><img data-src="../img/proj-plot.png" /></p>
+<aside class="notes">
+<p>Started using git around 2018, after a project under my belt.</p>
+</aside>
+</section>
+<section id="project-evolution-1" class="slide level2">
+<h2>Project evolution</h2>
+<p><img data-src="../img/whale-fruit-fly-plot.png" /></p>
+<aside class="notes">
+<p>My projects life spans had turned from whales to fruit flies;</p>
+<p>Evolution could occur much more rapidly.</p>
+Setup script made me really consider what my projects looked like.
+</aside>
+</section>
+<section id="git" class="slide level2">
+<h2><code>git</code></h2>
+<p><img src="https://s24255.pcdn.co/wp-content/uploads/2015/02/Git.png" height = 200px></p>
+</section>
+<section id="git-1" class="slide level2">
+<h2><code>git</code></h2>
+<ul>
+<li>ESSENTIAL to any workflow, collaborative or otherwise</li>
+<li>Reduces or eliminates uncertainty in code changes over time</li>
+<li>A feeling of safety to build upon code – nothing is lost!</li>
+</ul>
+</section>
+<section id="git-and-intentionality" class="slide level2">
+<h2><code>git</code> and intentionality</h2>
+<ul>
+<li>Introducing objects into the repository is a <strong>deliberate</strong> process
+<ul>
+<li>What files are worth putting into the repo?</li>
+<li>If they aren’t entered in, do others depend on it?</li>
+<li>Do you have a way to get it to them somehow?</li>
+</ul></li>
+<li>Eliminates dependence on <code>v1.0</code>, <code>v2.0</code>, <code>Archive/</code>, <code>Old/</code> etc.</li>
+</ul>
+<p>Paraphrased:</p>
+<blockquote>
+<p>git slows you down, but in a good way that makes you think about the project <br/> – Roger Peng, Not So Standard Deviations</p>
+</blockquote>
+</section>
+<section id="git-and-codification" class="slide level2">
+<h2><code>git</code> and codification</h2>
+<ul>
+<li>Commit message, tags, GitHub all allow commentary to build on code.</li>
+<li>Commit messages are <strong>required</strong>; the committer must consider the implications of changes at least once.</li>
+<li>GitHub really encourages the use of README files</li>
+</ul>
+</section>
+<section id="git-and-explicitness" class="slide level2">
+<h2><code>git</code> and explicitness</h2>
+<ul>
+<li>Plenty of space to write</li>
+<li>Code history is its own explicit record</li>
+</ul>
+</section>
+<section id="git-2" class="slide level2">
+<h2><code>git</code></h2>
+</section>
+<section id="r-projects-packages" class="slide level2">
+<h2>R projects / packages</h2>
+<p><img data-src="images/rproj.png" /></p>
+</section>
+<section id="r-projects-packages-1" class="slide level2">
+<h2>R projects / packages</h2>
+<p>Intentional:</p>
+<ul>
+<li>Requires the user to define an entry point for their project.</li>
+<li>Packages impose a regular structure on the folders contained in a project.</li>
+</ul>
+<p>Codified:</p>
+<ul>
+<li><code>.Rproj</code> clearly demarcates an R project, and itself contains some settings about the project.</li>
+<li>Packages heavily encourage documentation of code, in a specific format.</li>
+</ul>
+<p>Explicit:</p>
+<ul>
+<li><code>roxygen2</code> syntax defines an explicit format for documentation</li>
+</ul>
+<pre><code>#&#39; @title
+#&#39; @description
+#&#39; @param
+#&#39; @returns
+#&#39; @export</code></pre>
+</section>
+<section id="renv" class="slide level2">
+<h2><code>renv</code></h2>
+<p>Released 2019-10-26 (?) – Kevin Ushey author, maintainer</p>
+<p>Succeeds <code>packrat</code></p>
+<p>Package management system</p>
+<p>Reproducibility miracle</p>
+</section>
+<section id="renv-usage" class="slide level2">
+<h2><code>renv</code> usage</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># Initialize the project with some folders, changes to .Rprofile, etc.</span></a>
+<a class="sourceLine" id="cb2-2" title="2">renv<span class="op">::</span><span class="kw">init</span>()</a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co"># Take snapshots of the package dependencies at intervals</span></a>
+<a class="sourceLine" id="cb2-5" title="5">renv<span class="op">::</span><span class="kw">snapshot</span>()</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="co"># From another workstation, after cloning</span></a>
+<a class="sourceLine" id="cb2-8" title="8">renv<span class="op">::</span><span class="kw">restore</span>()</a></code></pre></div>
+</section>
+<section id="renv-1" class="slide level2">
+<h2><code>renv</code></h2>
+<p>Intentional:</p>
+<ul>
+<li><code>renv::consent()</code> a literal function in the package</li>
+<li>Forces the user to confront what packages are necessary for the project</li>
+</ul>
+</section>
+<section id="renv-2" class="slide level2">
+<h2><code>renv</code></h2>
+<p>Codified:</p>
+<ul>
+<li><code>renv::snapshot()</code> aids the user in writing down the R version, the CRAN repository, and package versions</li>
+<li>Could have been done before (<code>sessionInfo()</code>), but try restoring from that!</li>
+</ul>
+<pre><code>R version 3.5.3 (2019-03-11)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 18363)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252 LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+[1] Cairo_1.5-10         cowplot_1.0.0        curl_4.2            
+[4] dplyr_0.8.3          magrittr_1.5         ggplot2_3.2.1       
+[7] readxl_1.3.1         RevoUtils_11.0.3     RevoUtilsMath_11.0.0
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.3       highr_0.8        cellranger_1.1.0 pillar_1.4.2    
+ [5] compiler_3.5.3   tools_3.5.3      zeallot_0.1.0    digest_0.6.23   
+ [9] evaluate_0.14    lifecycle_0.1.0  tibble_2.1.3     gtable_0.3.0    
+[13] pkgconfig_2.0.3  rlang_0.4.2      cli_1.1.0        magick_2.2      
+[17] yaml_2.2.0       xfun_0.11        stringr_1.4.0    withr_2.1.2     
+[21] knitr_1.26       vctrs_0.2.0      revealjs_0.9     grid_3.5.3      
+[25] tidyselect_0.2.5 glue_1.3.1       R6_2.4.1         fansi_0.4.0     
+[29] rmarkdown_1.18   farver_2.0.1     purrr_0.3.3      backports_1.1.5 
+[33] scales_1.1.0     htmltools_0.4.0  assertthat_0.2.1 colorspace_1.4-1
+[37] renv_0.8.3       utf8_1.1.4       stringi_1.4.3    lazyeval_0.2.2  
+[41] munsell_0.5.0    crayon_1.3.4 </code></pre>
+</section>
+<section id="renv-3" class="slide level2">
+<h2><code>renv</code></h2>
+<p>Instead:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">cat</span>(<span class="kw">paste0</span>(<span class="kw">readLines</span>(<span class="st">&#39;renv.lock&#39;</span>), <span class="dt">collapse =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</a></code></pre></div>
+<pre><code>{
+  &quot;R&quot;: {
+    &quot;Version&quot;: &quot;3.5.3&quot;,
+    &quot;Repositories&quot;: [
+      {
+        &quot;Name&quot;: &quot;CRAN&quot;,
+        &quot;URL&quot;: &quot;https://mran.microsoft.com/snapshot/2019-12-02&quot;
+      }
+    ]
+  },
+  &quot;Packages&quot;: {
+    &quot;BH&quot;: {
+      &quot;Package&quot;: &quot;BH&quot;,
+      &quot;Version&quot;: &quot;1.69.0-1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;88e64b38758666b85d283617231bb766&quot;
+    },
+    &quot;Cairo&quot;: {
+      &quot;Package&quot;: &quot;Cairo&quot;,
+      &quot;Version&quot;: &quot;1.5-10&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;186dc1b9b7d249838831df5f69b8570a&quot;
+    },
+    &quot;MASS&quot;: {
+      &quot;Package&quot;: &quot;MASS&quot;,
+      &quot;Version&quot;: &quot;7.3-51.4&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;a670f645948409d325eddb0b199ed968&quot;
+    },
+    &quot;Matrix&quot;: {
+      &quot;Package&quot;: &quot;Matrix&quot;,
+      &quot;Version&quot;: &quot;1.2-18&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;b891a4c039bc7e3aa4e124ecc909d2a1&quot;
+    },
+    &quot;R6&quot;: {
+      &quot;Package&quot;: &quot;R6&quot;,
+      &quot;Version&quot;: &quot;2.4.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;de2df3e60ec21c125210a69dbdfa69f8&quot;
+    },
+    &quot;RColorBrewer&quot;: {
+      &quot;Package&quot;: &quot;RColorBrewer&quot;,
+      &quot;Version&quot;: &quot;1.1-2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;cdfb92174501c241a0d4e13fcac600a4&quot;
+    },
+    &quot;Rcpp&quot;: {
+      &quot;Package&quot;: &quot;Rcpp&quot;,
+      &quot;Version&quot;: &quot;1.0.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;9f1985842ec887e9aaf07140e426b82e&quot;
+    },
+    &quot;RcppEigen&quot;: {
+      &quot;Package&quot;: &quot;RcppEigen&quot;,
+      &quot;Version&quot;: &quot;0.3.3.7.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;39655be81755533e43fc3e4c1e709555&quot;
+    },
+    &quot;assertthat&quot;: {
+      &quot;Package&quot;: &quot;assertthat&quot;,
+      &quot;Version&quot;: &quot;0.2.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;263effaa484b1dc3013cf1c1e8f6624e&quot;
+    },
+    &quot;backports&quot;: {
+      &quot;Package&quot;: &quot;backports&quot;,
+      &quot;Version&quot;: &quot;1.1.5&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;6faa3b8a1c2daad65a7a586089adffa1&quot;
+    },
+    &quot;base64enc&quot;: {
+      &quot;Package&quot;: &quot;base64enc&quot;,
+      &quot;Version&quot;: &quot;0.1-3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;eec0d710cee1455ba24eb6ab622a60e9&quot;
+    },
+    &quot;boot&quot;: {
+      &quot;Package&quot;: &quot;boot&quot;,
+      &quot;Version&quot;: &quot;1.3-23&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;9ae266d4f489f83c3dd8f1a53a968adf&quot;
+    },
+    &quot;broom&quot;: {
+      &quot;Package&quot;: &quot;broom&quot;,
+      &quot;Version&quot;: &quot;0.5.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;a9d79e24f3ce764752c892f0d5f7f61c&quot;
+    },
+    &quot;cellranger&quot;: {
+      &quot;Package&quot;: &quot;cellranger&quot;,
+      &quot;Version&quot;: &quot;1.1.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;a6279d19fb8783f899f8dc3edb9a71b0&quot;
+    },
+    &quot;cli&quot;: {
+      &quot;Package&quot;: &quot;cli&quot;,
+      &quot;Version&quot;: &quot;1.1.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;c0a5f242aa2259cf7e40da04bb89f5d8&quot;
+    },
+    &quot;colorspace&quot;: {
+      &quot;Package&quot;: &quot;colorspace&quot;,
+      &quot;Version&quot;: &quot;1.4-1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;70941d6476af18c149b5b6916f87a7c5&quot;
+    },
+    &quot;cowplot&quot;: {
+      &quot;Package&quot;: &quot;cowplot&quot;,
+      &quot;Version&quot;: &quot;1.0.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;49cb1c341cdc238ee4588e79b9e8903a&quot;
+    },
+    &quot;crayon&quot;: {
+      &quot;Package&quot;: &quot;crayon&quot;,
+      &quot;Version&quot;: &quot;1.3.4&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;1e93bda8f2b60a0defc85c82a39e2891&quot;
+    },
+    &quot;curl&quot;: {
+      &quot;Package&quot;: &quot;curl&quot;,
+      &quot;Version&quot;: &quot;4.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;743ba61dd00b65d6ac661d04bb609d3b&quot;
+    },
+    &quot;digest&quot;: {
+      &quot;Package&quot;: &quot;digest&quot;,
+      &quot;Version&quot;: &quot;0.6.23&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;fa172aa7f72c5dbe5bb4f1b3a9ae0ab7&quot;
+    },
+    &quot;dplyr&quot;: {
+      &quot;Package&quot;: &quot;dplyr&quot;,
+      &quot;Version&quot;: &quot;0.8.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;6f5a4e8bdf605cba24dc821dea934dd3&quot;
+    },
+    &quot;ellipsis&quot;: {
+      &quot;Package&quot;: &quot;ellipsis&quot;,
+      &quot;Version&quot;: &quot;0.3.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;04769f4ecaca2dc40d3ec184dcfd6924&quot;
+    },
+    &quot;evaluate&quot;: {
+      &quot;Package&quot;: &quot;evaluate&quot;,
+      &quot;Version&quot;: &quot;0.14&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;ea89e41d97c0146c8f6bb068430a7e58&quot;
+    },
+    &quot;fansi&quot;: {
+      &quot;Package&quot;: &quot;fansi&quot;,
+      &quot;Version&quot;: &quot;0.4.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;7e8ca3a2d400cbdaf72a602e9833c920&quot;
+    },
+    &quot;farver&quot;: {
+      &quot;Package&quot;: &quot;farver&quot;,
+      &quot;Version&quot;: &quot;2.0.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;7b753bf4a8dee19c50cab205a59bdf91&quot;
+    },
+    &quot;generics&quot;: {
+      &quot;Package&quot;: &quot;generics&quot;,
+      &quot;Version&quot;: &quot;0.0.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;c2a574a14f5f45a84ead80391c3075d6&quot;
+    },
+    &quot;ggplot2&quot;: {
+      &quot;Package&quot;: &quot;ggplot2&quot;,
+      &quot;Version&quot;: &quot;3.2.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;9777320be08848a151135fae33ab617b&quot;
+    },
+    &quot;glue&quot;: {
+      &quot;Package&quot;: &quot;glue&quot;,
+      &quot;Version&quot;: &quot;1.3.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;156f76da413ebe13f4d7e65ae6a5d19f&quot;
+    },
+    &quot;gtable&quot;: {
+      &quot;Package&quot;: &quot;gtable&quot;,
+      &quot;Version&quot;: &quot;0.3.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;120444406cc884baa3a2ff5c0566045b&quot;
+    },
+    &quot;here&quot;: {
+      &quot;Package&quot;: &quot;here&quot;,
+      &quot;Version&quot;: &quot;0.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;07f70da7018237a1c3ba8f455bdec18d&quot;
+    },
+    &quot;highr&quot;: {
+      &quot;Package&quot;: &quot;highr&quot;,
+      &quot;Version&quot;: &quot;0.8&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;2f5651aef7832e8eea60d3f3add2ffaa&quot;
+    },
+    &quot;hms&quot;: {
+      &quot;Package&quot;: &quot;hms&quot;,
+      &quot;Version&quot;: &quot;0.5.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;e559c6933395f00dce5424377ea9b5aa&quot;
+    },
+    &quot;htmltools&quot;: {
+      &quot;Package&quot;: &quot;htmltools&quot;,
+      &quot;Version&quot;: &quot;0.4.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;9674fbb91c30995972bfdc794d60d75b&quot;
+    },
+    &quot;janitor&quot;: {
+      &quot;Package&quot;: &quot;janitor&quot;,
+      &quot;Version&quot;: &quot;1.2.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;0fce81cb50507d6f17109a2193cf086d&quot;
+    },
+    &quot;jsonlite&quot;: {
+      &quot;Package&quot;: &quot;jsonlite&quot;,
+      &quot;Version&quot;: &quot;1.6&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;9ec2b2fe0e874a66d0cb54d8ced5618e&quot;
+    },
+    &quot;knitr&quot;: {
+      &quot;Package&quot;: &quot;knitr&quot;,
+      &quot;Version&quot;: &quot;1.26&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;d78fcbe3c71bc2f28c51a11f9b700c30&quot;
+    },
+    &quot;labeling&quot;: {
+      &quot;Package&quot;: &quot;labeling&quot;,
+      &quot;Version&quot;: &quot;0.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;379ec196f3f3bb312727d52b022fa8f9&quot;
+    },
+    &quot;lattice&quot;: {
+      &quot;Package&quot;: &quot;lattice&quot;,
+      &quot;Version&quot;: &quot;0.20-38&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;16dfe2407fe485b6a9fb098120008721&quot;
+    },
+    &quot;lazyeval&quot;: {
+      &quot;Package&quot;: &quot;lazyeval&quot;,
+      &quot;Version&quot;: &quot;0.2.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;8c343e48c3f58de2c70a641592abc0f1&quot;
+    },
+    &quot;lifecycle&quot;: {
+      &quot;Package&quot;: &quot;lifecycle&quot;,
+      &quot;Version&quot;: &quot;0.1.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;0f01069bda8cfc5e4485b0f9397e931e&quot;
+    },
+    &quot;lme4&quot;: {
+      &quot;Package&quot;: &quot;lme4&quot;,
+      &quot;Version&quot;: &quot;1.1-21&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;8cbf57ef3321f7f2085ff0f007a982fd&quot;
+    },
+    &quot;magick&quot;: {
+      &quot;Package&quot;: &quot;magick&quot;,
+      &quot;Version&quot;: &quot;2.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;e8c6d09809163df89f166bf75874f218&quot;
+    },
+    &quot;magrittr&quot;: {
+      &quot;Package&quot;: &quot;magrittr&quot;,
+      &quot;Version&quot;: &quot;1.5&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;cb6367fec3fd68ff41424fe9797b8eaf&quot;
+    },
+    &quot;markdown&quot;: {
+      &quot;Package&quot;: &quot;markdown&quot;,
+      &quot;Version&quot;: &quot;1.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;ee162ebd6b7488e2f5a0773f1a06e71a&quot;
+    },
+    &quot;mgcv&quot;: {
+      &quot;Package&quot;: &quot;mgcv&quot;,
+      &quot;Version&quot;: &quot;1.8-31&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;8927cb7b787c8dcaac81a35a80be3016&quot;
+    },
+    &quot;mime&quot;: {
+      &quot;Package&quot;: &quot;mime&quot;,
+      &quot;Version&quot;: &quot;0.7&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;054d829092f3869d99d1ac57e4fe21eb&quot;
+    },
+    &quot;minqa&quot;: {
+      &quot;Package&quot;: &quot;minqa&quot;,
+      &quot;Version&quot;: &quot;1.2.4&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;d8d33b60cd154f5170863b1c6e9cb366&quot;
+    },
+    &quot;munsell&quot;: {
+      &quot;Package&quot;: &quot;munsell&quot;,
+      &quot;Version&quot;: &quot;0.5.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;381047af4d6b44ca4d9285dbdea42434&quot;
+    },
+    &quot;nlme&quot;: {
+      &quot;Package&quot;: &quot;nlme&quot;,
+      &quot;Version&quot;: &quot;3.1-142&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;7370dd336a854d9e105970deb89eee2f&quot;
+    },
+    &quot;nloptr&quot;: {
+      &quot;Package&quot;: &quot;nloptr&quot;,
+      &quot;Version&quot;: &quot;1.2.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;ba51b7923d99c37dc74a0569f65ee23d&quot;
+    },
+    &quot;patchwork&quot;: {
+      &quot;Package&quot;: &quot;patchwork&quot;,
+      &quot;Version&quot;: &quot;1.0.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;f673dac4d28f053074fc683778e1f993&quot;
+    },
+    &quot;pillar&quot;: {
+      &quot;Package&quot;: &quot;pillar&quot;,
+      &quot;Version&quot;: &quot;1.4.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;e77703ded3f52254363aa93a29be7b67&quot;
+    },
+    &quot;pkgconfig&quot;: {
+      &quot;Package&quot;: &quot;pkgconfig&quot;,
+      &quot;Version&quot;: &quot;2.0.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;2e868f900165801de752c5b57b3b2cde&quot;
+    },
+    &quot;plogr&quot;: {
+      &quot;Package&quot;: &quot;plogr&quot;,
+      &quot;Version&quot;: &quot;0.2.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;4f3b95dcac0fc64e36666ac8e6430fc7&quot;
+    },
+    &quot;plyr&quot;: {
+      &quot;Package&quot;: &quot;plyr&quot;,
+      &quot;Version&quot;: &quot;1.8.4&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;48b2c2a9c4a504ea9167e9252fd9fade&quot;
+    },
+    &quot;prettyunits&quot;: {
+      &quot;Package&quot;: &quot;prettyunits&quot;,
+      &quot;Version&quot;: &quot;1.0.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;47d4646a3be22893c04093e8db164989&quot;
+    },
+    &quot;progress&quot;: {
+      &quot;Package&quot;: &quot;progress&quot;,
+      &quot;Version&quot;: &quot;1.2.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;819ec59e511e26ceed4ebdf272b6671f&quot;
+    },
+    &quot;purrr&quot;: {
+      &quot;Package&quot;: &quot;purrr&quot;,
+      &quot;Version&quot;: &quot;0.3.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;5e461a0ea8f6277be20671f8dc7e7ca9&quot;
+    },
+    &quot;readxl&quot;: {
+      &quot;Package&quot;: &quot;readxl&quot;,
+      &quot;Version&quot;: &quot;1.3.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;b0467b5406ee2c29709c4a57cab692d1&quot;
+    },
+    &quot;rematch&quot;: {
+      &quot;Package&quot;: &quot;rematch&quot;,
+      &quot;Version&quot;: &quot;1.0.1&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;d80f39f4db9c537a1def235969d648ea&quot;
+    },
+    &quot;renv&quot;: {
+      &quot;Package&quot;: &quot;renv&quot;,
+      &quot;Version&quot;: &quot;0.8.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;54c5c0f4d9e93fa20d31fec2fa8bfe1c&quot;
+    },
+    &quot;reshape2&quot;: {
+      &quot;Package&quot;: &quot;reshape2&quot;,
+      &quot;Version&quot;: &quot;1.4.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;a0b8854199dbfa29a71f514b3ffcddf0&quot;
+    },
+    &quot;revealjs&quot;: {
+      &quot;Package&quot;: &quot;revealjs&quot;,
+      &quot;Version&quot;: &quot;0.9&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;6bed0d4998e6287eee5feb9548ac3406&quot;
+    },
+    &quot;rlang&quot;: {
+      &quot;Package&quot;: &quot;rlang&quot;,
+      &quot;Version&quot;: &quot;0.4.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;28812d1f03e3bc5f83ab27e915e20952&quot;
+    },
+    &quot;rmarkdown&quot;: {
+      &quot;Package&quot;: &quot;rmarkdown&quot;,
+      &quot;Version&quot;: &quot;1.18&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;7adb4d47aecd144a1d259b44e873e5f3&quot;
+    },
+    &quot;rprojroot&quot;: {
+      &quot;Package&quot;: &quot;rprojroot&quot;,
+      &quot;Version&quot;: &quot;1.3-2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;75611db569353a873f987f858b6f06dd&quot;
+    },
+    &quot;scales&quot;: {
+      &quot;Package&quot;: &quot;scales&quot;,
+      &quot;Version&quot;: &quot;1.1.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;e534275c7abe402544f909747985b1d0&quot;
+    },
+    &quot;snakecase&quot;: {
+      &quot;Package&quot;: &quot;snakecase&quot;,
+      &quot;Version&quot;: &quot;0.11.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;57d27987650ccf58fec74a9ac32dd82c&quot;
+    },
+    &quot;stringi&quot;: {
+      &quot;Package&quot;: &quot;stringi&quot;,
+      &quot;Version&quot;: &quot;1.4.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;0472e71f2347e13cd398d5225ff3b0ea&quot;
+    },
+    &quot;stringr&quot;: {
+      &quot;Package&quot;: &quot;stringr&quot;,
+      &quot;Version&quot;: &quot;1.4.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;01fb6c8262ac804d9bafa60cea8773da&quot;
+    },
+    &quot;tibble&quot;: {
+      &quot;Package&quot;: &quot;tibble&quot;,
+      &quot;Version&quot;: &quot;2.1.3&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;b28f74376db8b145e247e29e20bb7deb&quot;
+    },
+    &quot;tidyr&quot;: {
+      &quot;Package&quot;: &quot;tidyr&quot;,
+      &quot;Version&quot;: &quot;1.0.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;67e029f5199136c9f5e7ab583a79a8fe&quot;
+    },
+    &quot;tidyselect&quot;: {
+      &quot;Package&quot;: &quot;tidyselect&quot;,
+      &quot;Version&quot;: &quot;0.2.5&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;66c1a6de7f98266b76503698f2ca111d&quot;
+    },
+    &quot;tinytex&quot;: {
+      &quot;Package&quot;: &quot;tinytex&quot;,
+      &quot;Version&quot;: &quot;0.17&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;ded4e5aa34e2b0bd1572b5786b801079&quot;
+    },
+    &quot;utf8&quot;: {
+      &quot;Package&quot;: &quot;utf8&quot;,
+      &quot;Version&quot;: &quot;1.1.4&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;557d1cc1d7b4ff362db5990acc00f2a0&quot;
+    },
+    &quot;vctrs&quot;: {
+      &quot;Package&quot;: &quot;vctrs&quot;,
+      &quot;Version&quot;: &quot;0.2.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;eb2ec99368c838ffc1bff7ea427cdd2d&quot;
+    },
+    &quot;viridisLite&quot;: {
+      &quot;Package&quot;: &quot;viridisLite&quot;,
+      &quot;Version&quot;: &quot;0.3.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;e62dbc33079a4e2ff7429032f0e46efd&quot;
+    },
+    &quot;vroom&quot;: {
+      &quot;Package&quot;: &quot;vroom&quot;,
+      &quot;Version&quot;: &quot;1.0.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;0aaa5cf13980223839eba960bedf4905&quot;
+    },
+    &quot;withr&quot;: {
+      &quot;Package&quot;: &quot;withr&quot;,
+      &quot;Version&quot;: &quot;2.1.2&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;ce9ffa6d865ecaf6a56cacc811565e07&quot;
+    },
+    &quot;xfun&quot;: {
+      &quot;Package&quot;: &quot;xfun&quot;,
+      &quot;Version&quot;: &quot;0.11&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;3946705425821834a1f7cb2cd69c66e6&quot;
+    },
+    &quot;yaml&quot;: {
+      &quot;Package&quot;: &quot;yaml&quot;,
+      &quot;Version&quot;: &quot;2.2.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;e75dfa28ca59a73adfabf6899ce04472&quot;
+    },
+    &quot;zeallot&quot;: {
+      &quot;Package&quot;: &quot;zeallot&quot;,
+      &quot;Version&quot;: &quot;0.1.0&quot;,
+      &quot;Source&quot;: &quot;Repository&quot;,
+      &quot;Repository&quot;: &quot;CRAN&quot;,
+      &quot;Hash&quot;: &quot;c33bb7353728bd4547a079b2c351a021&quot;
+    }
+  }
+}</code></pre>
+</section>
+<section id="renv-4" class="slide level2">
+<h2><code>renv</code></h2>
+<p>Explicit:</p>
+<ul>
+<li>Package versions and sources are <em>exact</em></li>
+<li>Can specify non-standard repositories (i.e. GitHub)</li>
+</ul>
+</section>
+<section id="gnu-make" class="slide level2">
+<h2><code>GNU make</code></h2>
+</section>
+<section id="gnu-make-1" class="slide level2">
+<h2><code>GNU make</code></h2>
+<p>My favorite workflow addition</p>
+<p>Software from April 1973</p>
+<p>Orchestrates the creation of <strong>targets</strong> by evaluating <strong>dependencies’</strong> modification times, using <strong>recipes</strong> written by you.</p>
+<p><em>(Also see <code>drake</code>)</em></p>
+</section>
+<section id="gnu-make-2" class="slide level2">
+<h2><code>GNU make</code></h2>
+<div class="bigcode">
+<pre><code>target: dependency_1 dependency_2 dependency_n
+    recipe</code></pre>
+</div>
+</section>
+<section id="gnu-make-3" class="slide level2">
+<h2><code>GNU make</code></h2>
+<p>The makefile that determines this very project!</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">cat</span>(<span class="kw">paste0</span>(<span class="kw">readLines</span>(<span class="st">&#39;makefile&#39;</span>), <span class="dt">collapse =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</a></code></pre></div>
+<pre><code># Phonies ----------------------------------------------------------------------
+
+all: data transformations analyses reports presentation
+
+clean:
+    rm input/a5a.xlsx; rm output/*; rm report/report.html; rm img/*.png; rm img/*.jpg
+
+# Data -------------------------------------------------------------------------
+
+data: input/a5a.xlsx
+
+input/a5a.xlsx: scripts/import_voting_rate_data.R \
+R/*
+    Rscript scripts/import_voting_rate_data.R
+
+# Transformations --------------------------------------------------------------
+
+transformations: output/voting_rates.tsv
+
+output/voting_rates.tsv: \
+scripts/transform.R \
+R/* \
+input/a5a.xlsx
+    Rscript scripts/transform.R
+
+# Analyses ---------------------------------------------------------------------
+
+analyses: output/model_tbl.RDS
+
+output/model_tbl.RDS: output/voting_rates.tsv \
+scripts/analyze.R \
+R/*
+    Rscript scripts/analyze.R
+
+# Reports ----------------------------------------------------------------------
+
+reports: report/report.html
+
+report/report.html: output/model_tbl.RDS \
+report/report.Rmd R/*
+    Rscript -e &quot;rmarkdown::render(input = &#39;report/report.Rmd&#39;, output_file = &#39;report/report.html&#39;, output_dir = &#39;report&#39;, knit_root_dir = here::here())&quot;
+
+# Presentation -----------------------------------------------------------------
+
+presentation: pres/aw-project-organization-201912.html
+
+pres/aw-project-organization-201912.html: pres/aw-project-organization-201912.Rmd img/whale-fruit-fly-plot.png
+    Rscript -e &quot;rmarkdown::render(input = &#39;pres/aw-project-organization-201912.Rmd&#39;)&quot;
+
+img/whale-fruit-fly-plot.png: img/proj-graphic.R input/projinfo.xlsx
+    Rscript img/proj-graphic.R</code></pre>
+</section>
+<section id="gnu-make-4" class="slide level2">
+<h2><code>GNU make</code></h2>
+<p>I:</p>
+<ul>
+<li>The workflow is deliberately constructed.</li>
+<li>Forces the user to confront the reproducibility of the project.
+<ul>
+<li>If you can’t <code>make all</code> from scratch, your pipeline is broken!</li>
+</ul></li>
+</ul>
+<p>C:</p>
+<ul>
+<li>The workflow is <strong>written down</strong>.
+<ul>
+<li>Much more actionable than lexical ordering (i.e. <code>01_load.R</code>, <code>02_clean.R</code>, <code>03_analyze.R</code>).</li>
+</ul></li>
+</ul>
+<p>E:</p>
+<ul>
+<li>The workflow is <strong>precise</strong>
+<ul>
+<li>All inputs and outputs are defined, and the chain of events are elaborated in great detail.</li>
+</ul></li>
+</ul>
+</section>
+<section id="gnu-make-5" class="slide level2">
+<h2><code>GNU make</code></h2>
+<p>UNIX software design philosophy</p>
+<ul>
+<li>Write programs that do one thing and do it well.</li>
+<li>Write programs to work together.</li>
+</ul>
+</section>
+<section id="make-this-presentation" class="slide level2">
+<h2><code>make</code> this presentation!</h2>
+</section>
+    </div>
+  </div>
+
+  <script src="aw-project-organization-201912_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="aw-project-organization-201912_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'aw-project-organization-201912_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'aw-project-organization-201912_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
